@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans antialiased;
+  }
+}
+
+@layer components {
+  .input-base {
+    @apply w-full bg-[#0F0F0F] border border-outline-variant rounded text-on-surface text-body-base py-3 px-4 focus:outline-none focus:border-primary transition-colors duration-200 placeholder-[#525252];
+  }
+  .label-base {
+    @apply block font-mono text-mono-label text-on-surface-variant mb-2;
+  }
+  .help-text {
+    @apply mt-1 font-sans text-body-sm text-outline;
+  }
+  .btn-primary {
+    @apply bg-primary text-on-primary font-mono text-mono-label py-2.5 px-5 rounded hover:bg-surface-tint transition-colors inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply border border-outline-variant text-on-surface font-mono text-mono-label py-2.5 px-5 rounded hover:border-outline hover:text-white transition-colors bg-transparent inline-flex items-center justify-center gap-2;
+  }
+  .card {
+    @apply bg-surface-container border border-outline-variant rounded-lg transition-all;
+  }
+  .status-chip {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-mono text-mono-label;
+  }
+}
