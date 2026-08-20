@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "Layi-fakunle Olasubomi",
 
+  photoUrl: "https://zjkekihraozlnxskdyxa.supabase.co/storage/v1/object/public/project-thumbnails/suit%20pic.jpeg",
+
   // Hero section on the homepage
   headline: "Building Ideas Into Digital Products.",
   subheadline:
