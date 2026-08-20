@@ -1,14 +1,25 @@
 export const siteConfig = {
-  name: "Silver",
-  fullName: "Layi-Fakunle Olasubomi (Silver)",
-  role: "Full-stack developer building high-performance web applications.",
-  about:
-    "Computer Science student and freelance full-stack developer & graphic designer, currently on SIWES with Ikeja Electric Plc. I build products across fintech, edtech, and AI — from student-facing platforms to internal tooling.",
+  name: "Layi-fakunle Olasubomi",
+
+  // Hero section on the homepage
+  headline: "Building Ideas Into Digital Products.",
+  subheadline:
+    "A growing collection of web applications, AI experiments, and digital products built by Layi-fakunle Olasubomi.",
+
+  // About section
+  about: `I'm Layi-fakunle Olasubomi, a Computer Science student and full-stack developer passionate about building practical digital products that solve real problems.
+
+I work across web development, backend systems, databases, AI, and cloud technologies to turn ideas into functional products. My portfolio is a growing showroom of projects I've designed, built, experimented with, and launched, from student platforms and business solutions to AI-powered systems.
+
+I enjoy the journey from "what if?" to "it works."`,
+
   skills: ["React", "Next.js", "Node.js", "Express", "PostgreSQL", "Supabase", "Flutter", "Python"],
+
   links: {
     github: "https://github.com/Silverx-code",
-    linkedin: "",
-    email: "",
+    linkedin: "https://www.linkedin.com/in/olasubomi-layi-fakunle-b164923a0",
+    email: "layifakunlesubomi@gmail.com",
+    instagram: "https://www.instagram.com/silver.devx",
     cv: "",
   },
 };
