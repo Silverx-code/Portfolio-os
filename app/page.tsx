@@ -6,7 +6,6 @@ import ProjectCard from "@/components/ProjectCard";
 import PageViewTracker from "@/components/PageViewTracker";
 import TrackedLink from "@/components/TrackedLink";
 import { siteConfig } from "@/lib/site-config";
-import Image from "next/image";
 
 export const revalidate = 0;
 
@@ -29,27 +28,42 @@ export default async function ShowroomPage() {
       <Nav />
       <main className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         {/* Hero */}
-                {/* Hero */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24">
-          {siteConfig.photoUrl && (
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/20 p-1 mb-6">
-              <div className="relative w-full h-full rounded-full overflow-hidden">
-                <Image
-                  src={siteConfig.photoUrl}
-                  alt={`${siteConfig.name} profile picture`}
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                  priority
-                />
+        <section className="py-24 md:py-40 flex flex-col items-center text-center gap-8">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/40 p-1 bg-background shadow-[0_0_40px_rgba(173,198,255,0.25)]">
+            {siteConfig.avatarUrl ? (
+              <img
+                src={siteConfig.avatarUrl}
+                alt={siteConfig.name}
+                className="w-full h-full object-cover rounded-full"
+              />
+            ) : (
+              <div className="w-full h-full rounded-full flex items-center justify-center bg-surface-container-high font-sans font-bold text-headline-md text-on-surface">
+                {siteConfig.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")
+                  .slice(0, 2)
+                  .toUpperCase()}
               </div>
-            </div>
-          )}
-          <h1 className="font-sans font-bold text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 max-w-3xl"></h1>
-          <p className="text-body-base text-on-surface-variant max-w-xl mb-8">
-            {siteConfig.subheadline}
-          </p>
-          <a href="#projects" className="btn-primary">
+            )}
+          </div>
+
+          <div className="max-w-3xl">
+            <h1 className="font-sans font-bold text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
+              {siteConfig.name}
+            </h1>
+            <p className="font-sans text-headline-md text-on-surface-variant max-w-2xl mx-auto mb-2">
+              {siteConfig.headline}
+            </p>
+            <p className="text-body-base text-on-surface-variant max-w-xl mx-auto">
+              {siteConfig.subheadline}
+            </p>
+          </div>
+
+          <a
+            href="#projects"
+            className="btn-primary shadow-[0_0_20px_rgba(0,90,194,0.4)]"
+          >
             Explore my work ↓
           </a>
         </section>

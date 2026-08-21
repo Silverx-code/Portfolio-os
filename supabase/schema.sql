@@ -116,15 +116,5 @@ create policy "authenticated users can delete thumbnails"
   to authenticated
   using (bucket_id = 'project-thumbnails');
 
--- ── Seed data (optional — delete if you don't want sample rows) ─────
-insert into projects (title, slug, description, category, technologies, status, featured, live_url, github_url)
-values
-  ('SilverLink', 'silverlink',
-   'Connecting Nigerian students with SIWES placement opportunities across host companies and university coordinators.',
-   'web', array['Next.js','Supabase','PostgreSQL','Socket.io'], 'live', true,
-   'https://silverlink-zeta.vercel.app', 'https://github.com/Silverx-code'),
-  ('ScholarLib', 'scholarlib',
-   'A college digital library platform with role-based access and an admin portal.',
-   'web', array['React','Vite','Express','Supabase'], 'live', true,
-   'https://colcomlibrary.vercel.app', 'https://github.com/Silverx-code')
-on conflict (slug) do nothing;
+-- No seed projects — add your own from /admin/projects/new once the app
+-- is running. This keeps the showroom empty until you populate it.

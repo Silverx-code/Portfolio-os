@@ -1,9 +1,10 @@
 export const siteConfig = {
   name: "Layi-fakunle Olasubomi",
 
-  photoUrl: "https://zjkekihraozlnxskdyxa.supabase.co/storage/v1/object/public/project-thumbnails/suit%20pic.jpeg",
-
   // Hero section on the homepage
+  // Drop your photo in /public/avatar.jpg (or update the path) to show it in the hero.
+  // Leave empty to fall back to an initials avatar.
+  avatarUrl: "/avatar.jpg",
   headline: "Building Ideas Into Digital Products.",
   subheadline:
     "A growing collection of web applications, AI experiments, and digital products built by Layi-fakunle Olasubomi.",
