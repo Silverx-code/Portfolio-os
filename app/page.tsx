@@ -6,6 +6,7 @@ import ProjectCard from "@/components/ProjectCard";
 import PageViewTracker from "@/components/PageViewTracker";
 import TrackedLink from "@/components/TrackedLink";
 import { siteConfig } from "@/lib/site-config";
+import Image from "next/image";
 
 export const revalidate = 0;
 
@@ -28,10 +29,23 @@ export default async function ShowroomPage() {
       <Nav />
       <main className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         {/* Hero */}
+                {/* Hero */}
         <section className="pt-24 pb-16 md:pt-32 md:pb-24">
-          <h1 className="font-sans font-bold text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 max-w-3xl">
-            {siteConfig.headline}
-          </h1>
+          {siteConfig.photoUrl && (
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/20 p-1 mb-6">
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src={siteConfig.photoUrl}
+                  alt={`${siteConfig.name} profile picture`}
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                  priority
+                />
+              </div>
+            </div>
+          )}
+          <h1 className="font-sans font-bold text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 max-w-3xl"></h1>
           <p className="text-body-base text-on-surface-variant max-w-xl mb-8">
             {siteConfig.subheadline}
           </p>
