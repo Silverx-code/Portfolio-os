@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         <div className="flex flex-wrap gap-4 mb-12">
           {project.live_url && (
             <TrackedLink href={project.live_url} event="DEMO_CLICK" projectId={project.id} className="btn-primary">
-              Live Demo
+              Click here
             </TrackedLink>
           )}
           {project.github_url && (
